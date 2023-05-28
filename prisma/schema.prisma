@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["jsonProtocol"]
@@ -8,7 +5,26 @@ generator client {
 
 datasource db {
   provider          = "postgresql"
-  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
-  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
+  url               = env("POSTGRES_PRISMA_URL")
+  directUrl         = env("POSTGRES_URL_NON_POOLING")
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model machines {
+  machine_id         Int                  @id @default(autoincrement())
+  machine_name       String?              @db.VarChar(100)
+  zero_dawn          Boolean?
+  forbidden_west     Boolean?
+  how_to_fight       String?
+  machine_components machine_components[]
+}
+
+model machine_components {
+  component_id Int       @id @default(autoincrement())
+  machine_id   Int
+  component    String?   @db.VarChar(100)
+  information  String?
+  weakness     String?   @db.VarChar(100)
+  strength     String?   @db.VarChar(100)
+  machines     machines? @relation(fields: [machine_id], references: [machine_id], onDelete: NoAction, onUpdate: NoAction, map: "fk_machines")
 }
