@@ -1,9 +1,9 @@
-import Card from "./components/Card";
+import Carousel from '../app/components/Carousel';
 
 export default function Home() {
-  return (
-    <div>
-      <Card />
-    </div>
-  );
+	return (
+		<div>
+			<Carousel/>
+		</div>
+	);
 }
