@@ -1,9 +1,15 @@
-import Carousel from '../app/components/Carousel';
+import Carousel from "../app/components/Carousel";
+import Hero from "./components/Hero";
 
 export default function Home() {
-	return (
-		<div>
-			<Carousel/>
-		</div>
-	);
+  return (
+    <div>
+      <div>
+        <Hero />
+      </div>
+      <div>
+        <Carousel />
+      </div>
+    </div>
+  );
 }
