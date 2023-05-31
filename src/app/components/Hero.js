@@ -1,20 +1,18 @@
 import { PrismaClient } from "@prisma/client";
 import Image from "next/image";
 
-async function fetchMachine(machine_name) {
-  const prisma = new PrismaClient({});
-  const machine = await prisma.machines.findFirst({
-    where: {
-      machine_name: machine_name,
-    },
-  });
-  console.log(machine);
-  return machine;
-}
+// async function fetchMachine(machine_name) {
+//   const prisma = new PrismaClient({});
+//   const machine = await prisma.machines.findFirst({
+//     where: {
+//       machine_name: machine_name,
+//     },
+//   });
+//   console.log(machine);
+//   return machine;
+// }
 
 export default function Hero() {
-  const concac = fetchMachine("thunderjaw");
-  console.log(concac);
   return (
     <div className="hero bg-transparent">
       <div className="hero-content flex-col lg:flex-row">
