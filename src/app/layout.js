@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
                 </div>
                 <div className="navbar-center">
                   <a className="btn btn-ghost normal-case text-xl">
-                    Horizon: Zero Dawn Machines Wiki
+                    Horizon Machines Wiki
                   </a>
                 </div>
                 <div className="navbar-end">
