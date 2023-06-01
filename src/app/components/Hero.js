@@ -1,23 +1,15 @@
-import { PrismaClient } from "@prisma/client";
-import Image from "next/image";
+'use client';
 
-// async function fetchMachine(machine_name) {
-//   const prisma = new PrismaClient({});
-//   const machine = await prisma.machines.findFirst({
-//     where: {
-//       machine_name: machine_name,
-//     },
-//   });
-//   console.log(machine);
-//   return machine;
-// }
+import Image from "next/image";
+import Modal from "./Modal";
+
 
 export default function Hero() {
   return (
     <div className="hero bg-transparent">
       <div className="hero-content flex-col lg:flex-row">
         <Image
-          src="/Thunderjaw.jpeg"
+          src="/Thunderjaw.png"
           alt="machines"
           width="0"
           height="0"
@@ -31,7 +23,9 @@ export default function Hero() {
             Apex combat machine, equipped with a wide array of heavy artillery
             and melee attacks.
           </p>
-          <button className="btn btn-primary">Components</button>
+          <button className="btn btn-primary" onClick={()=>window.my_modal.showModal()}>Components</button>
+          <button className="btn btn-primary" onClick={()=>window.my_modal.showModal()}>How to fight</button>
+          <Modal/>
         </div>
       </div>
     </div>
