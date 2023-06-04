@@ -4,14 +4,11 @@ import Image from "next/image";
 import Modal from "./Modal";
 
 export default function Hero({ machine, machine_components }) {
-	// const machine_name = "Thunderjaw";
-	// const machine_info =
-	// 	"Apex combat machine, equipped with a wide array of heavy artillery and melee attacks.";
 	return (
 		<div className="hero bg-transparent">
 			<div className="hero-content flex-col lg:flex-row">
 				<Image
-					src="/Thunderjaw.png"
+					src={`/machines/${machine["machine_id"]}.png`}
 					alt="machines"
 					width="0"
 					height="0"
@@ -21,7 +18,7 @@ export default function Hero({ machine, machine_components }) {
 				/>
 				<div className="text-black space-x-2 space-y-2">
 					<h1 className="text-5xl font-bold">{machine["machine_name"]}</h1>
-					<p className="py-6">{machine["how_to_fight"]}</p>
+					<p className="py-6">{machine["machine_info"]}</p>
 					<div className="grid grid-cols-2 grid-row-1 gap-4">
 						<button
 							className="btn btn-primary"
