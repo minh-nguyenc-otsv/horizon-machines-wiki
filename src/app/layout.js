@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className="drawer-side">
               <label htmlFor="my-drawer" className="drawer-overlay"></label>
-              <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+              <ul className="menu p-4 w-80 bg-base-100 text-base-content h-screen">
                 {/*!--Sidebar content here --*/}
                 <li>
                   <a>Con Cặc</a>

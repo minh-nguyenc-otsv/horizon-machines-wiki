@@ -31,7 +31,7 @@ module.exports = {
 		themes: [
 			{
 				winter: {
-					...require("daisyui/src/colors/themes")["[data-theme=winter]"],
+					...require("daisyui/src/theming/themes")["[data-theme=winter]"],
 					"--rounded-box": "18px", // border radius rounded-box utility class, used in card and other large boxes
 					"--rounded-btn": "18px", // border radius rounded-btn utility class, used in buttons and similar element
 					"--rounded-badge": "18px", // border radius rounded-badge utility class, used in badges and similar
@@ -40,7 +40,7 @@ module.exports = {
 			},
 			{
 				night: {
-					...require("daisyui/src/colors/themes")["[data-theme=night]"],
+					...require("daisyui/src/theming/themes")["[data-theme=night]"],
 					"--rounded-box": "18px", // border radius rounded-box utility class, used in card and other large boxes
 					"--rounded-btn": "18px", // border radius rounded-btn utility class, used in buttons and similar element
 					"--rounded-badge": "18px", // border radius rounded-badge utility class, used in badges and similar
