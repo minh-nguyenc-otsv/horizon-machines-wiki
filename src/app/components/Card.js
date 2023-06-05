@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Card({ machine_id, machine_name }) {
 	return (
-		<div className="card w-96 bg-base-100 shadow-xl">
+		<div className="card w-min bg-base-100 shadow-xl grid content-between">
 			<figure>
 				<Image
 					src={`/machines/${machine_id}.png`}
