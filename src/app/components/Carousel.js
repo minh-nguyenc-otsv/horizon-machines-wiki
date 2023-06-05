@@ -10,7 +10,7 @@ export default function Carousel({ machines }) {
 		</div>
 	));
 	return (
-		<div className="carousel carousel-center w-screen p-4 space-x-4 bg-transparent">
+		<div className="carousel carousel-center w-screen p-4 space-x-4 bg-info">
 			{listMachines}
 		</div>
 	);

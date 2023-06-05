@@ -22,13 +22,13 @@ export default function Hero({ machine, machine_components }) {
 					<div className="grid grid-cols-2 grid-row-1 gap-4">
 						<button
 							className="btn btn-primary"
-							onClick={() => window.my_modal.showModal()}
+							// onClick={() => window.my_modal.showModal()}
 						>
 							Components
 						</button>
 						<button
 							className="btn btn-primary"
-							onClick={() => window.my_modal.showModal()}
+							// onClick={() => window.my_modal.showModal()}
 						>
 							How to fight
 						</button>
